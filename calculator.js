@@ -39,6 +39,11 @@ Calculator.prototype.get = function () {
   return this.tokenStream.shift();
 };
 
+function TreeNode(name, ...children){
+  this.name = name;
+  this.children = children;
+}
+
 var calc = new Calculator();
 calc.lexer("2 + (3 - 4) / 10 * 5");
 console.log(calc.tokenStream);
